@@ -1,7 +1,7 @@
-//this includes the vehicle class as a module
+
 const VehicleModule = require("./vehicleBaseClass")
 
-//this shows how to call from this module...
+
 let v = new VehicleModule.Vehicle("Mecury", "Sedan", "1965", "color", "mileage");
 console.log(v.make)
 
@@ -16,6 +16,8 @@ class Car extends VehicleModule{
         this.scheduleService=false; 
     }
 }
+
+
 
 loadPassenger(num) {
     if (this.passenger < this.maximumPassengers) {
@@ -48,3 +50,11 @@ checkService() {
         return this.scheduleService;                       
     }
 }
+
+let myVehicle=new Car ('mercury', 'sedan', '1998', 'black', '47000')
+myVehicle.loadPassenger(5)
+myVehicle.start()
+myVehicle.stop()
+myVehicle.checkService()
+
+    console.log(myVehicle)
